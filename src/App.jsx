@@ -22,16 +22,14 @@ function App() {
   
     const handleReset = () => {
       setCount(0);
+      setIsPaused(false);
     };
   
     const handlePause = () => {
       setIsPaused((prevIsPaused) => !prevIsPaused);
     };
   
-    const handleStop = () => {
-      setCount(0);
-      
-    };
+   
   
   return (
     <>
@@ -40,7 +38,7 @@ function App() {
       <h1>Counter: {count}</h1>
       <button onClick={handleReset}>Reset</button>
       <button onClick={handlePause}>{isPaused ? 'Resume' : 'Pause'}</button>
-      <button onClick={handleStop}>Stop</button>
+      
     </div>
   
         
